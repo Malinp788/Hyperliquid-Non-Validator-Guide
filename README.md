@@ -90,13 +90,13 @@ cd ~
 
 ---
 
-## ⚡ Запуск через systemd 🧴
+## ⚡ Запуск через systemd 🌱
 
 1. Создаём файл `/etc/systemd/system/hl-visor.service`:
 
 ```ini
 [Unit]
-Description=🌱 Hyperliquid hl-visor Non-Validator
+Description=Hyperliquid hl-visor Non-Validator
 After=network.target
 
 [Service]
