@@ -86,7 +86,7 @@ cd ~
 ```
 
 * Первая синхронизация может занять **30–60 минут** ⏳
-* Ошибки вида `missing file: visor_abci_state.json` — **нормальные на старте** 🍃
+* Ошибки вида `missing file: visor_abci_state.json` — **нормальные на старте** 😘🍃
 
 ---
 
@@ -96,7 +96,7 @@ cd ~
 
 ```ini
 [Unit]
-Description=🌱 Hyperliquid hl-visor Non-Validator 😘🧴
+Description=🌱 Hyperliquid hl-visor Non-Validator
 After=network.target
 
 [Service]
@@ -157,5 +157,5 @@ journalctl -u hl-visor -f
 
 ---
 
-> 🎀 Гайд создан с заботой о новичках и умных девушках-криптоэнтузиастках 💚🌿
-> 😘 Пусть ваша нода всегда будет синхронизирована, а сеть — стабильной! 🧴✨
+> 🎀 Гайд создан с заботой 💚🌿
+> 😘 Пусть ваша нода всегда будет синхронизирована, а сеть — стабильной! ✨
