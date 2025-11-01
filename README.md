@@ -1,6 +1,5 @@
 # Hyperliquid-Non-Validator-Guide
-# 🌿 Hyperliquid Non-Validator Node — Пошаговое Руководство 🌿💚
-![Hyperliquid](https://raw.githubusercontent.com/hyperliquid-dex/node/main/logo.png)
+# 🌿 Hyperliquid Non-Validator Node — Пошаговое Руководство 🌿
 
 ### 👩‍💻 Этот гайд поможет развернуть **Non-Validator ноду Hyperliquid Testnet** на Ubuntu 24.04 LTS.
 ---
@@ -42,7 +41,7 @@ lsb_release -a
 
 ---
 
-## 📥 Установка HL-Visor
+## 📥 Установка HL-Visor 💚
 
 1. Скачиваем публичный ключ Hyperliquid:
 
