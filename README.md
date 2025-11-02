@@ -1,4 +1,4 @@
-# Hyperliquid-Non-Validator-Guide
+# Hyperliquid-Non-Validator-Guide (редактируется)
 # 🌿 Hyperliquid Non-Validator Node — Пошаговое Руководство 🌿
 
 ### 👩‍💻 Этот гайд поможет развернуть **Non-Validator ноду Hyperliquid Testnet** на Ubuntu 24.04 LTS.
@@ -30,7 +30,7 @@
 
 ```bash
 sudo apt update && sudo apt upgrade -y
-sudo apt install curl wget gnupg lsb-release -y
+sudo apt install curl wget gnupg lsb-release install zstd -y
 ```
 
 2. Проверяем версию Ubuntu:
@@ -38,7 +38,15 @@ sudo apt install curl wget gnupg lsb-release -y
 ```bash
 lsb_release -a
 ```
-
+## ✅ Установка AWS CLI
+```bash
+sudo apt update
+sudo apt install -y unzip curl python3 python3-pip
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+aws --version
+```
 ---
 
 ## 📥 Установка HL-Visor 💚
@@ -118,11 +126,18 @@ systemctl enable --now hl-visor.service
 systemctl status hl-visor -l
 
 ```
+## 📘 Пояснение к флагам:
 
-```bash
+--write-trades — сохраняет сделки.
+--write-order-statuses — статус ордеров.
+--write-fills — заполнения (fill events).
+--serve-evm-rpc — включает RPC-интерфейс (например, для внешних запросов).
+--serve-info — запускает информационный API.
+--replica-cmds-style actions — обязательный параметр, без него не запустится.
 
 ## Если бакет открыт, можно попробовать скачать оттуда напрямую:
 
+```bash
 cd /root/hl/hyperliquid_data
 curl -s https://hyperliquid-archive.s3.amazonaws.com/Testnet/snapshot/latest.tar.zst -o latest.tar.zst
 
@@ -134,7 +149,23 @@ cd ~
 ./hl-visor run-non-validator --write-trades --write-order-statuses --serve-eth-rpc
 
 ```
-## 📊 Мониторинг и логирование 🌱
+
+## Запуск visor в валидаторском режиме
+
+Запуск в валидаторском режиме (вручную, чтобы не путать systemd).
+
+NODE_TYPE=validator
+VALIDATOR_PRIVATE_KEY=
+
+```bash
+cd /root/hl
+./hl-visor run-validator \
+  --config /root/hl/non_validator_config.json \
+  --visor /root/hl/visor.json \
+  --gossip /root/hl/override_gossip_config.json
+```
+  
+##  📊 Мониторинг и логирование 🌱
 
 1. Просмотр логов в реальном времени:
 
