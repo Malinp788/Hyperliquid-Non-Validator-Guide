@@ -53,6 +53,8 @@ gpg --import pub_key.asc
 2. Скачиваем бинарник HL-Visor и проверяем подпись:
 
 ```bash
+Скачиваем публичный ключ Hyperliquid:
+
 curl -L https://binaries.hyperliquid-testnet.xyz/Testnet/hl-visor -o hl-visor
 curl -L https://binaries.hyperliquid-testnet.xyz/Testnet/hl-visor.asc -o hl-visor.asc
 gpg --verify hl-visor.asc hl-visor
@@ -82,13 +84,6 @@ nano /root/hl/visor.json
 ```
 
 ---
-
-## ▶ Запуск ноды вручную 😘
-
-```bash
-cd ~
-./hl-visor run-non-validator --write-trades --write-order-statuses --serve-eth-rpc
-```
 
 * Первая синхронизация может занять **30–60 минут** ⏳
 * Ошибки вида `missing file: visor_abci_state.json` — **нормальные на старте** 😘🍃
@@ -121,7 +116,12 @@ systemctl daemon-reload
 systemctl enable --now hl-visor.service
 systemctl status hl-visor -l
 ```
+## ▶ Запуск ноды вручную 😘 (по необходимости)
 
+```bash
+cd ~
+./hl-visor run-non-validator --write-trades --write-order-statuses --serve-eth-rpc
+```
 ---
 
 ## 📊 Мониторинг и логирование 🌱
@@ -153,6 +153,10 @@ journalctl -u hl-visor | grep "connected to abci stream from" | awk '{print $NF}
 ## 💡 Полезные команды 😘🧴
 
 ```bash
+1. Количество активных peers
+journalctl -u hl-visor | grep "connected to abci stream from" | awk '{print $NF}' | sort | uniq | wc -l
+
+2. 
 systemctl restart hl-visor
 systemctl stop hl-visor
 systemctl status hl-visor -l
