@@ -106,7 +106,6 @@ After=network.target
 
 [Service]
 Type=simple
-User=root
 ExecStart=/root/hl/hl-visor run-non-validator --write-trades --write-order-statuses --serve-eth-rpc
 Restart=always
 RestartSec=10
