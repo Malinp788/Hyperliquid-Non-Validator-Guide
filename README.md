@@ -75,6 +75,11 @@ echo '{"chain": "Testnet"}' > ~/hl/visor.json
 ```bash
 chmod a+x ~/hl-visor
 ```
+3. Создаём конфигурационный файл
+
+```bash
+nano /root/hl/visor.json
+```
 
 ---
 
