@@ -116,15 +116,24 @@ WantedBy=multi-user.target
 systemctl daemon-reload
 systemctl enable --now hl-visor.service
 systemctl status hl-visor -l
+
+```
+
+```bash
+
+## Если бакет открыт, можно попробовать скачать оттуда напрямую:
+
+cd /root/hl/hyperliquid_data
+curl -s https://hyperliquid-archive.s3.amazonaws.com/Testnet/snapshot/latest.tar.zst -o latest.tar.zst
+
 ```
 ## ▶ Запуск ноды вручную 😘 (по необходимости)
 
 ```bash
 cd ~
 ./hl-visor run-non-validator --write-trades --write-order-statuses --serve-eth-rpc
-```
----
 
+```
 ## 📊 Мониторинг и логирование 🌱
 
 1. Просмотр логов в реальном времени:
