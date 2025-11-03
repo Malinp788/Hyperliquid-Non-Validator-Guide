@@ -71,6 +71,8 @@ unzip awscliv2.zip
 sudo ./aws/install
 aws --version
 ```
+Ожидаемый вывод:
+- aws-cli/2.31.27 Python/3.13.9 Linux/5.15.158-2-pve exe/x86_64.ubuntu.24
 ---
 ### 📥 Установка HL-Visor 💚
 1. Скачиваем публичный ключ Hyperliquid:
