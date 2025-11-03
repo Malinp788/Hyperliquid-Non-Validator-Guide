@@ -127,7 +127,7 @@ chmod +x /root/hl/hl-visor
 
 1. Создаём файл `/etc/systemd/system/hl-visor.service`:
 ```bash
-```ini
+sudo tee /etc/systemd/system/hl-visor.service > /dev/null <<EOF
 [Unit]
 Description=Hyperliquid hl-visor Non-Validator
 After=network.target
@@ -135,12 +135,15 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=/root/hl
-ExecStart=/root/hl/hl-visor run-non-validator --write-trades --write-order-statuses --serve-eth-rpc
+ExecStart=/root/hl/hl-visor run-non-validator --write-trades --write-order-statuses --serve-evm-rpc
 Restart=always
 RestartSec=10
+StandardOutput=journal
+StandardError=journal
 
 [Install]
 WantedBy=multi-user.target
+EOF
 ```
 2. Перезагружаем systemd и запускаем сервис:
 ```bash
