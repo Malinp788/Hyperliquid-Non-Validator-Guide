@@ -30,7 +30,7 @@
 
 ```bash
 sudo apt update && sudo apt upgrade -y
-sudo apt install curl wget gnupg lsb-release install zstd -y
+sudo apt install curl wget gnupg lsb-release zstd -y
 ```
 
 2. Проверяем версию Ubuntu:
