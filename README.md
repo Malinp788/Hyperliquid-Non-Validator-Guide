@@ -76,12 +76,13 @@ gpg --verify hl-visor.asc hl-visor
 chmod a+x hl-visor
 ```
 Если увидишь что-то подобное, то значит подпись корректная и файл не был изменён.
+```bash
 - gpg: Signature made Mon Nov 3 07:20:06 2025 UTC gpg: using EDDSA key CF2C2EA3DC3E8F042A55FB6503254A9349F1820B
 - gpg: Good signature from "Hyperliquid <notices@hyperfoundation.org>" [unknown]
 - gpg: WARNING: This key is not certified with a trusted signature!
 - gpg: There is no indication that the signature belongs to the owner.
 - Primary key fingerprint: CF2C 2EA3 DC3E 8F04 2A55 FB65 0325 4A93 49F1 820B"
-
+```
 После того как ты проверил подпись бинарника с помощью hl-visor.asc и pub_key.asc, эти файлы уже не нужны для работы ноды. Они нужны только для проверки целостности и подлинности бинарника. Ты можешь безопасно удалить их так:
 ```bash
 rm hl-visor.asc pub_key.asc
