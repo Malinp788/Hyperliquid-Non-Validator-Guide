@@ -63,21 +63,6 @@ lsb_release -a
  - Release:        24.04
  - Codename:       noble
 ---
-### ✅ Установка AWS CLI
-```bash
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
-aws --version
-```
-Ожидаемый вывод:
-- aws-cli/2.31.27 Python/3.13.9 Linux/5.15.158-2-pve exe/x86_64.ubuntu.24
-
-После этого смело удаляем скачанный архив:
-```bash
-rm -f /root/awscliv2.zip
-```
----
 ### 📥 Установка HL-Visor 💚
 1. Скачиваем публичный ключ Hyperliquid:
 ```bash
@@ -165,6 +150,23 @@ systemctl status hl-visor -l
 cd ~
 ./hl-visor run-non-validator --write-trades --write-order-statuses --serve-eth-rpc
 ```
+### ✅ Установка AWS CLI (для работы со снепшотами)
+1. Скачиваем и распаковываем дистрибутив
+```bash
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+2. Устанавливаем и проверяем версию:
+```bash
+sudo ./aws/install
+aws --version
+```
+Ожидаемый вывод:
+- aws-cli/2.31.27 Python/3.13.9 Linux/5.15.158-2-pve exe/x86_64.ubuntu.24
+Удаляем лишнее:
+```bash
+rm -f /root/awscliv2.zip
+```
+---
 ### 1️⃣ Генерация ключа для валидатора
 ```bash
 ./hl-visor generate-keys
