@@ -98,6 +98,10 @@ chmod a+x hl-visor
 - gpg: There is no indication that the signature belongs to the owner.
 - Primary key fingerprint: CF2C 2EA3 DC3E 8F04 2A55 FB65 0325 4A93 49F1 820B"
 
+После того как ты проверил подпись бинарника с помощью hl-visor.asc и pub_key.asc, эти файлы уже не нужны для работы ноды. Они нужны только для проверки целостности и подлинности бинарника. Ты можешь безопасно удалить их так:
+```bash
+rm hl-visor.asc pub_key.asc
+```
 ---
 ### ⚙ Создание конфигурации
 1. Создаём папку и конфиг:
