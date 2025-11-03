@@ -47,8 +47,9 @@ sudo apt update
 sudo apt full-upgrade -y
 ```
 #### Во время установки нужно будет ответить на несколько вопрос системы:
-1. Restart services during package upgrades without asking? (разрешить ли автоматически перезапускать службы (service), если во время обновления затронуты системные библиотеки (libc, libssl, libpam и т. д.), рекомендуется ответить "Y"
-2. crontab (Y/I/N/O/D/Z) [default=N] ? если у вас были назначены задания в crontab, то отвечаем "N".
+1. Restart services during package upgrades without asking? (разрешить ли автоматически перезапускать службы (service), если во время обновления затронуты системные библиотеки (libc, libssl, libpam и т. д.), рекомендуется ответить "Y".
+2. Crontab (Y/I/N/O/D/Z) [default=N] ? если у вас были назначены задания в crontab, то отвечаем "N".
+3. What do you want to do about modified configuration file sshd_config? Если ты не менял sshd_config локально, безопасно выбрать install the package maintainer's version.
 #### После установки ядра и пакетов:
 ```bash
 sudo reboot
