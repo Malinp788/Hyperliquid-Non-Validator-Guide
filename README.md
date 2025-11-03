@@ -26,7 +26,7 @@
 1. Обновляем систему:
 ```bash
 sudo apt update && sudo apt upgrade -y
-sudo apt install curl wget gnupg lsb-release zstd unzip -y
+sudo apt install curl wget gnupg lsb-release zstd unzip python3 python3-pip -y
 ```
 2. Проверяем версию Ubuntu:
 ```bash
@@ -66,8 +66,6 @@ lsb_release -a
 
 ### ✅ Установка AWS CLI
 ```bash
-sudo apt update
-sudo apt install -y unzip curl python3 python3-pip
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
