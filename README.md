@@ -26,7 +26,7 @@
 1. Обновляем систему:
 ```bash
 sudo apt update && sudo apt upgrade -y
-sudo apt install curl wget gnupg lsb-release zstd -y
+sudo apt install curl wget gnupg lsb-release zstd unzip -y
 ```
 2. Проверяем версию Ubuntu:
 ```bash
@@ -79,8 +79,6 @@ curl -O https://raw.githubusercontent.com/hyperliquid-dex/node/main/pub_key.asc
 gpg --import pub_key.asc
 ```
 2. Скачиваем бинарник HL-Visor и проверяем подпись:
-```bash
-Скачиваем публичный ключ Hyperliquid:
 ```bash
 curl -L https://binaries.hyperliquid-testnet.xyz/Testnet/hl-visor -o hl-visor
 curl -L https://binaries.hyperliquid-testnet.xyz/Testnet/hl-visor.asc -o hl-visor.asc
