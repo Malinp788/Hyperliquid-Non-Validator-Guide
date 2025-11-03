@@ -56,11 +56,11 @@ sudo reboot
 lsb_release -a
 ```
 Ожидаемый вывод:
-> No LSB modules are available.
-> Distributor ID: Ubuntu
-> Description:    Ubuntu 24.04.3 LTS
-> Release:        24.04
-> Codename:       noble
+> --No LSB modules are available.
+> --Distributor ID: Ubuntu
+> --Description:    Ubuntu 24.04.3 LTS
+> --Release:        24.04
+> --Codename:       noble
 
 ### ✅ Установка AWS CLI
 ```bash
