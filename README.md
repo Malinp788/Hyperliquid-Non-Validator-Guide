@@ -39,7 +39,6 @@ lsb_release -a
 sudo tar czf /root/backup-etc-$(date +%F).tar.gz /etc
 ```
 Если это Proxmox VM — просто создай snapshot средствами Proxmox. После обновления можно будет удалить backup.
-
 ####⚠️ Выполняй только если это чистая Ubuntu 22.04, не кастомизированная. 
 ```bash
 sudo sed -i 's/jammy/noble/g' /etc/apt/sources.list
@@ -63,7 +62,7 @@ lsb_release -a
  - Description:    Ubuntu 24.04.3 LTS
  - Release:        24.04
  - Codename:       noble
-
+---
 ### ✅ Установка AWS CLI
 ```bash
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -87,6 +86,9 @@ curl -L https://binaries.hyperliquid-testnet.xyz/Testnet/hl-visor.asc -o hl-viso
 gpg --verify hl-visor.asc hl-visor
 chmod a+x hl-visor
 ```
+Если увидишь что-то подобное, то значит подпись корректная и файл не был изменён.
+"gpg: Signature made Mon Nov 3 07:20:06 2025 UTC gpg: using EDDSA key CF2C2EA3DC3E8F042A55FB6503254A9349F1820B gpg: Good signature from "Hyperliquid <notices@hyperfoundation.org>" [unknown] gpg: WARNING: This key is not certified with a trusted signature! gpg: There is no indication that the signature belongs to the owner. Primary key fingerprint: CF2C 2EA3 DC3E 8F04 2A55 FB65 0325 4A93 49F1 820B"
+
 ---
 ### ⚙ Создание конфигурации
 1. Создаём папку и конфиг:
@@ -135,7 +137,7 @@ systemctl status hl-visor -l
 > --serve-evm-rpc — включает RPC-интерфейс (например, для внешних запросов)
 > --serve-info — запускает информационный API
 > --replica-cmds-style actions — обязательный параметр, без него не запустится
-
+---
 #### Если бакет открыт, можно попробовать скачать оттуда напрямую:
 ```bash
 cd /root/hl/hyperliquid_data
