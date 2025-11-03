@@ -207,7 +207,7 @@ journalctl -u hl-visor | grep "connected to abci stream from" | awk '{print $NF}
 * `Failed to determine user credentials` — убедитесь, что в systemd указано `User=root` 🧠
 * * Первая синхронизация может занять **30–60 минут** ⏳
 ---
-## 💡 Полезные команды 😘🧴
+## 💡 Полезные команды 😘
 ```bash
 1. Количество активных peers
 journalctl -u hl-visor | grep "connected to abci stream from" | awk '{print $NF}' | sort | uniq | wc -l
