@@ -120,6 +120,8 @@ chmod +x /root/hl/hl-visor
 ```bash
 /root/hl/hl-visor --version
 ```
+Если ответ "hyperliquid-visor 691d819be5d5e2b0f912023f992ad392b808c1e9|2025-11-03 15:06:27 +0800|uncommitted=false" значит hl-visor успешно перемещён и стал исполняемым.🎉
+
 ---
 ### ⚡ Запуск через systemd 🌱
 
