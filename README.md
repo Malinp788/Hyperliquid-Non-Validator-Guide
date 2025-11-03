@@ -91,7 +91,7 @@ chmod a+x hl-visor
 - gpg: Good signature from "Hyperliquid <notices@hyperfoundation.org>" [unknown]
 - gpg: WARNING: This key is not certified with a trusted signature!
 - gpg: There is no indication that the signature belongs to the owner.
-> Primary key fingerprint: CF2C 2EA3 DC3E 8F04 2A55 FB65 0325 4A93 49F1 820B"
+- Primary key fingerprint: CF2C 2EA3 DC3E 8F04 2A55 FB65 0325 4A93 49F1 820B"
 
 ---
 ### ⚙ Создание конфигурации
