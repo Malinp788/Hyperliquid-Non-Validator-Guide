@@ -109,13 +109,16 @@ rm hl-visor.asc pub_key.asc
 mkdir -p ~/hl
 echo '{"chain": "Testnet"}' > ~/hl/visor.json
 ```
-2. Делаем бинарник исполняемым:
+2. Перемещаем бинарник в папку  /root/hl/ и делаем его исполняемым:
 ```bash
-chmod a+x ~/hl-visor
+mv /root/hl-visor /root/hl/hl-visor
 ```
-3. Создаём конфигурационный файл
 ```bash
-nano /root/hl/visor.json
+chmod +x /root/hl/hl-visor
+```
+3. Проверить, что он исполняется:
+```bash
+/root/hl/hl-visor --version
 ```
 ---
 ### ⚡ Запуск через systemd 🌱
