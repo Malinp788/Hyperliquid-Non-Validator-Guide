@@ -1,5 +1,5 @@
 # Hyperliquid-Non-Validator-Guide (редактируется)
-# 🌿 Hyperliquid Non-Validator Node — Пошаговое Руководство 🌿
+# 🌿 Hyperliquid Node — Пошаговое Руководство 🌿
 
 ### 👩‍💻 Этот гайд поможет развернуть **Non-Validator ноду Hyperliquid Testnet** на Ubuntu 24.04 LTS.
 ---
