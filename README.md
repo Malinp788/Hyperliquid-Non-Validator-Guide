@@ -130,12 +130,6 @@ StandardError=journal
 WantedBy=multi-user.target
 EOF
 ```
-2. Перезагружаем systemd и запускаем сервис:
-```bash
-systemctl daemon-reload
-systemctl enable --now hl-visor.service
-systemctl status hl-visor -l
-```
 #### 📘 Пояснение к флагам:
 ```bash
 --write-trades — сохраняет сделки
@@ -144,6 +138,12 @@ systemctl status hl-visor -l
 --serve-evm-rpc — включает RPC-интерфейс (например, для внешних запросов)
 --serve-info — запускает информационный API
 --replica-cmds-style actions — обязательный параметр, без него не запустится
+```
+2. Перезагружаем systemd и запускаем сервис:
+```bash
+systemctl daemon-reload
+systemctl enable --now hl-visor.service
+systemctl status hl-visor -l
 ```
 ---
 ### ▶ Запуск ноды вручную 😘 (по необходимости)
