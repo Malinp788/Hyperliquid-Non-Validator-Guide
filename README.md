@@ -120,7 +120,7 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=/root/hl
-ExecStart=/root/hl/hl-visor run-non-validator --write-trades --write-order-statuses --serve-evm-rpc
+ExecStart=/root/hl/hl-visor run-non-validator --serve-evm-rpc
 Restart=always
 RestartSec=10
 StandardOutput=journal
