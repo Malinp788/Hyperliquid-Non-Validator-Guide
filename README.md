@@ -37,7 +37,7 @@ lsb_release -a
 ```bash
 sudo tar czf /root/backup-etc-$(date +%F).tar.gz /etc
 ```
-Если это Proxmox VM — просто создай snapshot средствами Proxmox. После обновления можно будет удалить backup.
+Если это Proxmox VM — просто создай snapshot средствами Proxmox. После обновления можно будет удалить backup
 ####⚠️ Выполняй только если это чистая Ubuntu 22.04, не кастомизированная. 
 ```bash
 sudo sed -i 's/jammy/noble/g' /etc/apt/sources.list
