@@ -73,7 +73,6 @@ gpg --import pub_key.asc
 curl -L https://binaries.hyperliquid-testnet.xyz/Testnet/hl-visor -o hl-visor
 curl -L https://binaries.hyperliquid-testnet.xyz/Testnet/hl-visor.asc -o hl-visor.asc
 gpg --verify hl-visor.asc hl-visor
-chmod a+x hl-visor
 ```
 Если увидишь что-то подобное, то значит подпись корректная и файл не был изменён.
 ```bash
@@ -99,7 +98,7 @@ echo '{"chain": "Testnet"}' > ~/hl/visor.json
 mv /root/hl-visor /root/hl/hl-visor
 ```
 ```bash
-chmod +x /root/hl/hl-visor
+chmod a+x /root/hl/hl-visor
 ```
 3. Проверить, что он исполняется:
 ```bash
