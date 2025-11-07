@@ -93,16 +93,13 @@ rm hl-visor.asc pub_key.asc
 mkdir -p ~/hl
 echo '{"chain": "Testnet"}' > ~/hl/visor.json
 ```
-2. Перемещаем бинарник в папку  /root/hl/ и делаем его исполняемым:
+2. Делаем его исполняемым:
 ```bash
-mv /root/hl-visor /root/hl/hl-visor
-```
-```bash
-chmod a+x /root/hl/hl-visor
+chmod a+x /root/hl-visor
 ```
 3. Проверить, что он исполняется:
 ```bash
-/root/hl/hl-visor --version
+/root/hl-visor --version
 ```
 Если ответ "hyperliquid-visor 691d819be5d5e2b0f912023f992ad392b808c1e9|2025-11-03 15:06:27 +0800|uncommitted=false" значит hl-visor успешно перемещён и стал исполняемым.🎉
 
@@ -119,7 +116,7 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=/root/hl
-ExecStart=/root/hl/hl-visor run-non-validator --serve-evm-rpc
+ExecStart=/root/hl-node run-non-validator --serve-evm-rpc --serve-info --replica-cmds-style actions
 Restart=always
 RestartSec=10
 StandardOutput=journal
